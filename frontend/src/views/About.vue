@@ -3,9 +3,10 @@
     <h1>This is an about page 123</h1>
     <button v-on:click="getList()">Get</button>
     <ul>
-      <li v-for="data in arr" v-bind:key="data.name">
-        <div>{{data.name}}</div>
-        <div>{{data.value}}</div>
+      <li v-for="data in arr" v-bind:key="data.weblogin">
+        <div>{{data.first_name}}</div>
+        <div>{{data.last_name}}</div>
+        <div>{{data.weblogin}}</div>
       </li>
     </ul>
   </div>
