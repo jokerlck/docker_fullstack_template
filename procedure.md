@@ -258,6 +258,7 @@ Create YML file (development version)
         backend:
             build: ./backend
             container_name: micro_rdapps_backend_compose_docker_container
+            restart: always
             volumes:
                 - ./backend:/rchk_app_production/back-end/
             ports:
@@ -365,8 +366,26 @@ development -> 用export sql, add落container做野
 
 production -> 連去database server
 
+# Development vs Production
+
+How to change ?
+
+1) env.js 
+    
+    change _mode_ to 'production' or 'development'
+
+2) docker-compose.yml
+
+    comment and uncomment
+
+Note that : in development -> database reset when rebuild docker -> since mounted rcapps_db.sql
+
+You have to copy the db from production
+
 # Cronjob
 
 # Error message
 
 # Load balance
+
+# in app pic
